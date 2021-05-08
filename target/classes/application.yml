@@ -1,17 +1,16 @@
-student:
-  stu-id: 1
-  stu-name: tom
-  graduated: false
-  subject:
-    - java
-    - php
-    - golang
-  birthday: 2002/12/10
-  teachers:
-    java: ary
-    php: jerry
-    golang: wang
-  address:
-    province: 广东
-    city: 广州
-    street: 中环西路
+spring:
+  datasource:
+    name: mydb
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/springboot?serverTimezone=UTC
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath*:/mybatis/mapper/*Mapper.xml
+
+logging:
+  level:
+    com.atguigu.springboot.mapper: debug
+
